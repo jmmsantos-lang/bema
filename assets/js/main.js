@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", loadNewsIfNeeded);
 
 // ---- Área reservada (barreira leve) ----
 // 1) Define aqui a palavra-passe (podes trocar quando quiseres)
-const RESERVED_PASSWORD = "muda-isto-para-uma-pass";
+const RESERVED_PASSWORD = "B3m4B3m4";
 
 // 2) Funções chamadas pela página area-reservada.html
 function unlockReserved(){
