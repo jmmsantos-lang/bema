@@ -289,3 +289,21 @@ hr.sep{
 @media (max-width: 900px){
   .news-grid{ grid-template-columns: 1fr; }
 }
+
+
+/* Botão rápido editar notícias */
+.btn-mini{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  padding:8px 14px;
+  border-radius:999px;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  text-decoration:none;
+  border:1px solid rgba(15,23,42,.20);
+}
+.btn-mini:hover{
+  opacity: 0.9;
+}
