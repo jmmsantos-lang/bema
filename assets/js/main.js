@@ -161,3 +161,43 @@ async function loadNewsIfNeeded(){
 }
 
 document.addEventListener("DOMContentLoaded", loadNewsIfNeeded);
+
+
+// ---- Área reservada (barreira leve) ----
+// 1) Define aqui a palavra-passe (podes trocar quando quiseres)
+const RESERVED_PASSWORD = "muda-isto-para-uma-pass";
+
+// 2) Funções chamadas pela página area-reservada.html
+function unlockReserved(){
+  const input = document.getElementById("pw");
+  const msg = document.getElementById("msg");
+  if(!input) return;
+
+  if(input.value === RESERVED_PASSWORD){
+    sessionStorage.setItem("bema_reserved_ok", "1");
+    showReserved(true);
+    if(msg) msg.textContent = "";
+  }else{
+    if(msg) msg.textContent = "Palavra‑passe errada.";
+  }
+}
+
+function lockReserved(){
+  sessionStorage.removeItem("bema_reserved_ok");
+  showReserved(false);
+}
+
+function showReserved(isOk){
+  const loginBox = document.getElementById("loginBox");
+  const reservedContent = document.getElementById("reservedContent");
+  if(!loginBox || !reservedContent) return;
+
+  loginBox.style.display = isOk ? "none" : "block";
+  reservedContent.style.display = isOk ? "block" : "none";
+}
+
+// Auto-check quando entras na página
+document.addEventListener("DOMContentLoaded", () => {
+  const ok = sessionStorage.getItem("bema_reserved_ok") === "1";
+  showReserved(ok);
+});

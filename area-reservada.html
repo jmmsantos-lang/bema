@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Área reservada — BEMA</title>
+  <meta name="description" content="Área reservada — BEMA" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/img/logo.png" alt="BEMA">
+        <span class="brand-text">Biblioteca Escolar de Manhente</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a class="active" href="area-reservada.html">Área reservada</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Área reservada</h1>
+      <p class="small">Nota: isto é uma barreira “leve” (não é segurança absoluta num site estático). Serve para não ficar à vista.</p>
+
+      <div id="loginBox" style="margin-top:12px">
+        <label><strong>Palavra‑passe</strong><br>
+          <input id="pw" type="password" placeholder="••••••••"
+                 style="width:100%;padding:10px;border-radius:12px;border:1px solid rgba(29,29,27,.12)">
+        </label>
+        <br><br>
+        <button class="btn-mini" type="button" onclick="unlockReserved()">Entrar</button>
+        <p id="msg" class="small" style="margin-top:10px"></p>
+      </div>
+
+      <div id="reservedContent" style="display:none;margin-top:14px">
+        <h2>Atalhos</h2>
+        <div class="grid">
+          <a class="card" href="https://github.com/jmmsantos-lang/bema/edit/main/conteudos/noticias.md" target="_blank" rel="noreferrer">
+            ✏️ Editar notícias
+            <p class="small">Abre o GitHub direto no ficheiro <strong>noticias.md</strong>.</p>
+          </a>
+
+          <a class="card" href="https://github.com/jmmsantos-lang/bema/edit/main/conteudos/inicio.md" target="_blank" rel="noreferrer">
+            ✏️ Editar Início
+            <p class="small">Alterar texto da home (Markdown).</p>
+          </a>
+
+          <a class="card" href="https://github.com/jmmsantos-lang/bema" target="_blank" rel="noreferrer">
+            🛠️ Abrir repositório
+            <p class="small">Uploads, ficheiros, etc.</p>
+          </a>
+        </div>
+
+        <hr class="sep">
+        <button class="btn-outline" type="button" onclick="lockReserved()">Sair</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <hr class="sep">
+    <div class="footer-grid">
+      <div>
+        <strong>Biblioteca Escolar de Manhente</strong>
+        <p class="small">
+          <strong>Telefone:</strong> 253 849 410<br>
+          Rua Manuel Maria Barbosa du Bocage nº 67<br>
+          4750-547 Manhente, Barcelos, Portugal
+        </p>
+        <p class="small">© <span id="year"></span> BEMA</p>
+      </div>
+      <div>
+        <strong>Links úteis</strong>
+        <ul class="list">
+          <li><a href="#" target="_blank" rel="noreferrer">Facebook da BEMA</a></li>
+          <li><a href="#" target="_blank" rel="noreferrer">Instagram da BEMA</a></li>
+          <li><a href="#" target="_blank" rel="noreferrer">Rede de Biblioteca de Barcelos</a></li>
+          <li><a href="#" target="_blank" rel="noreferrer">Ligação à AEAF</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
